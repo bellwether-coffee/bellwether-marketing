@@ -1,0 +1,66 @@
+-var title = 'Bellwether'
+
+block settings
+  - var slug = "unknown"
+  - var page = "Unknown"
+
+doctype html
+html(lang='en' class = "#{slug}" data-page='#{page}' )
+  head
+    meta(charset='UTF-8')
+    meta( content="width=device-width, user-scalable=no", name="viewport" )
+    meta( name="description", content="Bellwether coffee")
+      
+    meta( property="og:title", content="Bellwether" )
+    meta( property="og:type", content="website" )
+    meta( property="og:url", content="https://www.bellwethercoffee.com/" )
+    meta( property="og:description", content="Bellwether coffee." )
+    meta( property="og:image", content="http://www.plumrelish.com/images/logo/bellwether-logo.png" )
+    meta( property="og:image:width", content="120" )
+    meta( property="og:image:height", content="120" )
+      
+    meta( property="twitter:card", content="summary_large_image" )
+    meta( property="twitter:url", content="https://www.bellwethercoffee.com/" )
+    meta( property="twitter:title", content="Bellwether coffee" )
+    meta( property="twitter:description", content="Bellwether coffee" )
+    meta( property="twitter:image", content="http://www.plumrelish.com/images/logo/bellwether-logo.png" )
+    title= title
+    
+    link(rel='apple-touch-icon', sizes='57x57', href='/images/apple-touch-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='/images/apple-touch-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='/images/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='/images/apple-touch-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='/images/apple-touch-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='/images/apple-touch-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='/images/apple-touch-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='/images/apple-touch-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='/images/apple-touch-icon-180x180.png')
+    link(rel='icon', type='image/png', href='/images/favicon-32x32.png', sizes='32x32')
+    link(rel='icon', type='image/png', href='/images/android-chrome-192x192.png', sizes='192x192')
+    link(rel='icon', type='image/png', href='/images/favicon-96x96.png', sizes='96x96')
+    link(rel='icon', type='image/png', href='/images/favicon-16x16.png', sizes='16x16')
+    link(rel='manifest', href='/images/manifest.json')
+    link(rel='mask-icon', href='/images/safari-pinned-tab.svg', color='#5bbad5')
+    link(rel='shortcut icon', href='/images/favicon.ico')
+    meta(name='msapplication-TileColor', content='#da532c')
+    meta(name='msapplication-TileImage', content='/images/mstile-144x144.png')
+    meta(name='msapplication-config', content='/images/browserconfig.xml')
+    meta(name='theme-color', content='#ffffff')
+    
+    block css
+      link(rel='stylesheet', href='/css/app.css')
+    block js
+      if ENV_DEVELOPMENT
+        script(src='http://localhost:35729/livereload.js')
+  body
+    block hero
+      .header
+                      
+    block content
+    
+    block footer
+      .footer
+
+    block scripts
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+      script(src='/js/app.js')
