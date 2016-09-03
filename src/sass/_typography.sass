@@ -52,21 +52,27 @@
 	font-stretch: normal
 	unicode-range: U+0020-FB04
 
-html
+html, *
 	color: $black
+	font-family: 'avenir-book'
 
 h1, h2, h3, h3, h4, h5, h6
 	color: inherit
 	font-family: 'avenir-black'
 	display: block
 
-p, a, span
+p, a, span, label, input
 	color: inherit
 	font-family: 'avenir-book'
 
 b, strong
 	color: inherit
 	font-family: 'avenir-medium'
+
+input[type=button],
+input[type=submit]
+	font-family: 'avenir-medium'
+	line-height: 1.1
 
 .type-lighten
 	color: inherit
