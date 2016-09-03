@@ -1,4 +1,4 @@
--var title = 'Bellwether'
+//- -var title = 'Bellwether'
 
 block settings
   - var slug = "unknown"
@@ -7,6 +7,12 @@ block settings
 doctype html
 html(lang='en' class = "#{slug}" data-page='#{page}' )
   head
+  
+    block title
+      title Bellwether Coffee. Stay close to your roast.
+      
+    block seo
+    
     meta(charset='UTF-8')
     meta( content="width=device-width, user-scalable=no", name="viewport" )
     meta( name="description", content="Bellwether coffee")
@@ -24,7 +30,7 @@ html(lang='en' class = "#{slug}" data-page='#{page}' )
     meta( property="twitter:title", content="Bellwether coffee" )
     meta( property="twitter:description", content="Bellwether coffee" )
     meta( property="twitter:image", content="http://www.plumrelish.com/images/logo/bellwether-logo.png" )
-    title= title
+    //- title= title
     
     link(rel='apple-touch-icon', sizes='57x57', href='/images/apple-touch-icon-57x57.png')
     link(rel='apple-touch-icon', sizes='60x60', href='/images/apple-touch-icon-60x60.png')
@@ -55,11 +61,33 @@ html(lang='en' class = "#{slug}" data-page='#{page}' )
   body
     block hero
       .header
+        .container
+          .row
+            .col-xs-12.navigation
+              ul
+                li.small
+                  a(href='/' class=(slug === 'home' ? 'active' : '')) Home
+                li.small
+                  a(href='/about' class=(slug === 'about' ? 'active' : '')) About
+                li.small
+                  a(href='/contact' class=(slug === 'contact' ? 'active' : '')) Contact
                       
     block content
     
     block footer
-      .footer
+      .footer.gray-bg
+        .container
+          .row.middle-xs            
+            .col-md-3.col-xs-12.m-t-xs-2.m-b-xs-2.left-text-md.center-text-xs
+              a.logo.upper.type-cc-3d.small(href="/") bellwether
+            .col-md-9.col-xs-12
+              ul.m-b-xs-0.right-text-md.center-text-xs.m-t-xs-2.m-b-xs-2
+                li.m-b-xs-0.small
+                  a(href='/') Home
+                li.m-b-xs-0.small
+                  a(href='/about') About
+                li.m-b-xs-0.small
+                  a(href='/contact') Contact
 
     block scripts
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')

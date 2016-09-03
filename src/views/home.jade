@@ -1,5 +1,12 @@
 extends layout
 
+block title
+  title title Bellwether Coffee. Stay close to your roast.
+  
+  block seo
+    meta( name="description", content="Pana is a real-time virtual travel agent and mobile travel assistant, blending real humans and smart tech to make your next vacation or business trip easy.")
+    meta( name="keywords", content="travel assistant; travel agent; virtual travel assistant; virtual travel agent; online travel agent; virtual assistant; online assistant; pana travel agent; mobile travel agent; mobile travel assistant")
+
 block settings
   - var slug = "home"
   - var page = "Home"
@@ -11,3 +18,14 @@ block content
         .col-xs-12.center-text-xs
           h1.upper.type-cc-3d bellwether
           h3.upper.type-cc coffee co.
+      .row
+        .col-xs-12.center-text-xs
+          h3.red-txt Commited to the betterment of coffee.
+  .green-bg.mission-section
+    .container
+      .pad-large
+        .row.middle-xs
+          .col-md-4.col-xs-12.white-txt.m-b-md-0.m-b-xs-2
+            h2.underline-col Our Mission.
+          .col-md-8.col-xs-12.white-txt
+            p.p-l-md-2.p-l-xs-0 Bellwether exists to empower and better the coffee world from farm to cup by providing the highest quality sustainably curated green and roasted coffee and the newest technology in coffee roasting. We're striving to build the inevitable connected and relevant future of coffee roasting.
