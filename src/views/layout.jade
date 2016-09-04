@@ -63,8 +63,10 @@ html(lang='en' class = "#{slug}" data-page='#{page}' )
       .header
         .container
           .row
-            .col-xs-12.navigation
-              ul
+            .col-md-3.col-xs-12.m-t-xs-2.m-b-xs-2.left-text-md.center-text-xs
+              a.logo.upper.type-cc-3d.small(href="/") bellwether
+            .col-md-9.col-xs-12
+              ul.m-b-xs-0.right-text-md.center-text-xs.m-t-xs-2.m-b-xs-2
                 li.small
                   a(href='/' class=(slug === 'home' ? 'active' : '')) Home
                 li.small
@@ -90,5 +92,6 @@ html(lang='en' class = "#{slug}" data-page='#{page}' )
                   a(href='/contact') Contact
 
     block scripts
+      script(src="https://cdn.jsdelivr.net/sweetalert2/4.2.5/sweetalert2.min.js")
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
       script(src='/js/app.js')

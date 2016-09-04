@@ -1,15 +1,15 @@
 extends layout
 
 block title
-  title title Bellwether Coffee. Stay close to your roast.
+  title Bellwether Coffee. Stay close to your roast.
   
   block seo
     meta( name="description", content="Contact - Bellwether is a crazy coffee industry professionals, designers, mad scientists and engineers seeking a better understanding of what amazing coffee is made of. We’re taking a balanced approach with research and technology to empower the wise and aspiring artists within the coffee universe.")
     meta( name="keywords", content="coffee; coffee roaster; coffee roaster mobile; coffee farm platform;")
 
 block settings
-  - var slug = "home"
-  - var page = "Home"
+  - var slug = "contact"
+  - var page = "Contact"
 
 block content
   .container
@@ -20,41 +20,48 @@ block content
             h1 Say hello.
             p Interested in learning more about Bellwether coffee. Send us a note.
             p.error-text
-            form.row(accept-charset="UTF-8" action="https://formkeep.com/f/963bc7468876" method="POST")
-              .col-xs-12
-                .form-item
-                  label Your name
-                  input(type="text" placeholder="Mike Coffee" name="name" autofocus)
-                .form-item
-                  label Your email
-                  input(type="text" placeholder="mikee@coffee.com" name="email")
-                .form-item
-                  label What are you interested in?
-              .col-md-4.col-xs-12
-                .form-item.d-flex.align-middle.m-l-md-1.m-l-md-0
-                  input.m-t-xs-0(type="checkbox" name="interest[]" value="farming")  
-                  label.checkbox  Farming
-                .form-item.d-flex.align-middle.m-l-md-1.m-l-md-0
-                  input.m-t-xs-0(type="checkbox" name="interest[]" value="production")  
-                  label.checkbox Production
-              .col-md-4.col-xs-12
-                .form-item.d-flex.align-middle.m-l-md-1.m-l-md-0
-                  input.m-t-xs-0(type="checkbox" name="interest[]" value="green-buying")  
-                  label.checkbox Green Buying
-                
-                .form-item.d-flex.align-middle.m-l-md-1.m-l-md-0
-                  input.m-t-xs-0(type="checkbox" name="interest[]" value="roasting")  
-                  label.checkbox Roasting
-              .col-md-4.col-xs-12
-                .form-item.d-flex.align-middle.m-l-md-1.m-l-md-0
-                  input.m-t-xs-0(type="checkbox" name="interest[]" value="brewing")  
-                  label.checkbox Brewing
-                .form-item.d-flex.align-middle.m-l-md-1.m-l-md-0
-                  input.m-t-xs-0(type="checkbox" name="interest[]" value="impact")  
-                  label.checkbox Impact
-              .col-xs-12
-                .form-item
-                  label How can we help?
-                  textarea( type="text" placeholder="I have a question..." name="body" )
-              .col-xs-12
-                input.btn-large.btn-default.btn-red( type="submit" value="Submit" )
+        form(accept-charset="UTF-8")
+          .row
+            .col-xs-12
+              .form-item
+                label Your name
+                input(type="text" placeholder="Mike Coffee" name="name" autofocus)
+              .form-item
+                label Your email
+                input(type="text" placeholder="mikee@coffee.com" name="email")
+              .form-item
+                label What are you interested in?
+          .row.between-xs.center-xs.left-text-xs
+            .col-md-4.col-xs-12
+              .form-item
+                label
+                  input(type="checkbox" name="interest[]" value="farming")
+                  | Farming
+              .form-item
+                label
+                  input(type="checkbox" name="interest[]" value="production")
+                  | Production
+            .col-md-4.col-xs-12
+              .form-item
+                label
+                  input(type="checkbox" name="interest[]" value="green-buying")
+                  | Green Buying
+              .form-item
+                label
+                  input(type="checkbox" name="interest[]" value="roasting")
+                  | Roasting
+            .col-md-4.col-xs-12
+              .form-item
+                label
+                  input(type="checkbox" name="interest[]" value="brewing")
+                  | Brewing
+              .form-item
+                label 
+                  input(type="checkbox" name="interest[]" value="social-impact")
+                  Social Impact
+          .row
+            .col-xs-12
+              .form-item
+                label How can we help?
+                textarea( type="text" placeholder="I have a question..." name="body" )
+              input.btn-large.btn-default.btn-red( type="submit" value="Submit" )

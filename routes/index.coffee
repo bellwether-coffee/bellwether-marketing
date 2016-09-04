@@ -2,12 +2,15 @@ express = require 'express'
 router = express.Router()
 
 router.get '/', (req, res) ->
-  res.render 'home', { title: 'Home' }
+  res.render 'home'
 
 router.get '/about', (req, res) ->
-  res.render 'about', { title: 'About' }
+  res.render 'about'
 
 router.get '/contact', (req, res) ->
-  res.render 'contact', { title: 'Contact' }
+  res.render 'contact'
+
+router.get '/thank-you', (req, res) ->
+  res.render 'thank-you', 
 
 module.exports = router

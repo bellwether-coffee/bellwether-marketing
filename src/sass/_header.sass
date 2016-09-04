@@ -1,36 +1,22 @@
 .header
-  padding-top: ms(3)
-  margin-bottom: ms(1)
-  .navigation
-    display: block
-    z-index: 10
-    margin-left: auto
-    margin-right: auto
-    +target(md)
-      margin-left: 0
-      margin-right: 0
-    ul
-      margin: 0
-      padding: 0
-      text-align: center
-      padding-top: ms(0)
-      padding-top: ms(0)
+  ul
+    padding-left: 0
+    li
+      text-decoration: none
+      display: inline-block
+      padding-left: ms(0)
+      padding-right: ms(0)
       +target(md)
-        padding-top: 0
-        text-align: right
-      li
-        margin: 0
-        padding: 0
-        list-style-type: none
-        padding-left: ms(1)
-        display: inline-block
-        .light & a
-          color: white
-        .btn-default
-          margin: 0
-        a
-          color: $red
+        padding-right: 0
+      a
+        font-weight: 600
+        text-decoration: none
+        color: $red
+        transition: 200ms
+        &.active,
+        &:hover
           text-decoration: none
-          &:hover,
-          &.active
-            text-decoration: underline
+          border-bottom: ms(-8) solid $red
+  .logo
+    text-decoration: none
+    font-size: ms(1)
