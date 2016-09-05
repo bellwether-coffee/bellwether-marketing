@@ -12,56 +12,57 @@ block settings
   - var page = "Contact"
 
 block content
-  .container
+  .gray-bg
     .container
       .pad-medium
         .row
-          .col-xs-12
-            h1 Say hello.
-            p Interested in learning more about Bellwether coffee. Send us a note.
-            p.error-text
-        form(accept-charset="UTF-8")
-          .row
-            .col-xs-12
-              .form-item
-                label Your name
-                input(type="text" placeholder="Mike Coffee" name="name" autofocus)
-              .form-item
-                label Your email
-                input(type="text" placeholder="mikee@coffee.com" name="email")
-              .form-item
-                label What are you interested in?
-          .row.between-xs.center-xs.left-text-xs
-            .col-md-4.col-xs-12
-              .form-item
-                label
-                  input(type="checkbox" name="interest[]" value="farming")
-                  | Farming
-              .form-item
-                label
-                  input(type="checkbox" name="interest[]" value="production")
-                  | Production
-            .col-md-4.col-xs-12
-              .form-item
-                label
-                  input(type="checkbox" name="interest[]" value="green-buying")
-                  | Green Buying
-              .form-item
-                label
-                  input(type="checkbox" name="interest[]" value="roasting")
-                  | Roasting
-            .col-md-4.col-xs-12
-              .form-item
-                label
-                  input(type="checkbox" name="interest[]" value="brewing")
-                  | Brewing
-              .form-item
-                label 
-                  input(type="checkbox" name="interest[]" value="social-impact")
-                  Social Impact
-          .row
-            .col-xs-12
-              .form-item
-                label How can we help?
-                textarea( type="text" placeholder="I have a question..." name="body" )
-              input.btn-large.btn-default.btn-red( type="submit" value="Submit" )
+          .col-md-10.col-md-offset-1.col-xs-12
+            .contact-form
+              h1 Say hello.
+              p Interested in learning more about Bellwether coffee. Send us a note.
+              p.error-text
+              form(accept-charset="UTF-8")
+                .row
+                  .col-xs-12
+                    .form-item
+                      label Your name
+                      input(type="text" placeholder="Mike Coffee" name="name" autofocus)
+                    .form-item
+                      label Your email
+                      input(type="text" placeholder="mikee@coffee.com" name="email")
+                    .form-item
+                      label What are you interested in?
+                .row.between-xs.center-xs.left-text-xs
+                  .col-md-4.col-xs-12
+                    .form-item
+                      label
+                        input(type="checkbox" name="interest[]" value="farming")
+                        | Farming
+                    .form-item
+                      label
+                        input(type="checkbox" name="interest[]" value="production")
+                        | Production
+                  .col-md-4.col-xs-12
+                    .form-item
+                      label
+                        input(type="checkbox" name="interest[]" value="green-buying")
+                        | Green Buying
+                    .form-item
+                      label
+                        input(type="checkbox" name="interest[]" value="roasting")
+                        | Roasting
+                  .col-md-4.col-xs-12
+                    .form-item
+                      label
+                        input(type="checkbox" name="interest[]" value="brewing")
+                        | Brewing
+                    .form-item
+                      label 
+                        input(type="checkbox" name="interest[]" value="social-impact")
+                        Social Impact
+                .row
+                  .col-xs-12
+                    .form-item
+                      label How can we help?
+                      textarea( type="text" placeholder="I have a question..." name="body" )
+                    input.btn-large.btn-default.btn-red( type="submit" value="Submit" )
